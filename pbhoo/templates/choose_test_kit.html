@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Choose Test Kit{% endblock %}
+
+{% block body %}
+  <b>Select the kit you bought</b>
+  <br>
+  <ul>
+  {% for kit in kits %}
+    <li><a href="{{ url_for('kit_instructions', display_name=kit.display_name) }}">{{ kit.display_name }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}

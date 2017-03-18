@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Submit Test Kit Results{% endblock %}
+
+{% block content %}
+  <h3>Test results for: {{ kit.display_name }}</h3>
+  <br>
+  <br>
+  <b>This page should tie into Android and iOS camera via browser APIs which would be awesome</b>
+  <br>
+  <br>
+  <form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    {{ form.photo.label }}
+    {{ form.photo(size=20) }}
+    <input type="submit" value="Upload">
+  </form>
+{% endblock %}

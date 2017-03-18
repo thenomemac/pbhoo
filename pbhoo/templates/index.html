@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}PbHOO{% endblock %}
+
+{% block content %}
+  <!-- main page layout -->
+  <b>Make a selection</b>
+  <br>
+  <a href="{{ url_for('choose_test_kit') }}">I have a water test kit.</a>
+  <br>
+  <a href="{{ url_for('need_test_kit') }}">I need a water test kit.</a>
+{% endblock %}

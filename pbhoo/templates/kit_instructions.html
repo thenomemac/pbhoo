@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Test Kit Instructions{% endblock %}
+
+{% block content %}
+  These are the super cool animated instructions for {{ kit.display_name }}! Like so cool! Really cool and probably D3js!
+  <br>
+  <br>
+  <a class="btn btn-default" href="{{ url_for('kit_results', display_name=kit.display_name) }}" role="button">Submit Test Results</a>
+{% endblock %}
